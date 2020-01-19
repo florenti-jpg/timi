@@ -35,5 +35,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: ng lint --force=true
       - run: ng serve -o 
