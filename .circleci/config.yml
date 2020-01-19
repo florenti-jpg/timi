@@ -26,8 +26,6 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
       
-      - run: sudo npm unistall -g @angular/cli 
-      - run: npm chache clean
       - run: sudo npm install -g @angular/cli 
       - run: npm i 
       - run: zip -r package.zip . -i dist/package/
