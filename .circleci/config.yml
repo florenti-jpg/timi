@@ -25,7 +25,10 @@ jobs:
             - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
-            
+      
+      - run: npm unistall -g @angular/cli 
+      - run: npm chache clean
+      - run: sudo npm install -g @angular/cli 
       - run: npm i 
       - run: zip -r package.zip . -i dist/package/
 
@@ -35,4 +38,4 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: ng start
+      - run: echo "Hello Renti"
