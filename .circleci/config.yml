@@ -27,7 +27,7 @@ jobs:
             - v1-dependencies-
             
       - run: npm i 
-      - run: zip -r package.zip dist/package/
+      - run: zip -r package.zip . -i dist/package/
 
       - save_cache:
           paths:
